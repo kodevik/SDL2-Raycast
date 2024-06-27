@@ -3,3 +3,6 @@ A basic raycasting engine implemented in C++ using the SDL2 library. Mouse movem
 
 
 The raycasting algorithm itself works by checking first whether the player is facing a wall. This is done by checking whether the area of a triangle formed by the player position, the wall start and wall end is equal to the sum of the areas of 3 triangles formed between combinations of two of these points and a point slightly in front of the player in the direction of the ray angle. after it is confirmed that the player is facing toward the wall, the line intersection is calculated between the casted ray and the wall.
+
+
+The main project files may be found in the ``include/src``. The ``SDL2`` directory within contains all the SDL2 library headers, and the rest of the files are the engine files. ``levelmap.hpp`` contains a declaration of the ``LevelMap`` class for creating maps to be rendered by the engine. Functionality is contained to add walls to the map using start and end coordinates, and to get the closest wall (if any) at a given angle from the player's position. ``player.hpp`` contains the declaration of the ``Player`` class, which represents the player and contains functionality to move the player. Finally, ``engine.hpp`` contains a declaration of the ``Engine`` class, which handles the rendering of the level, and keystrokes and mouse events for player movement. 
